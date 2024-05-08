@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2d272;
+    background-image: url(img/background.png), url(img/estrellas-bg.png);
+}
+
+#arriba {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.barra {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: white;
+}
+
+.cajitas-top1 {
+    width: 60%;
+    height: 100%;
+}
+
+.cajitas-top1 img {
+    width: 100%;
+}
+
+
+
+.cajitas-top2 {
+    background-color: #e6f9f4;
+}
+
+.cajitas-top2 h3 {
+    color: #5fa3a5;
+    font-size: large;
+    padding-top: 10px;
+}
+
+.cajitas-top2 p {
+    padding-top: 10px;
+    font-size: small;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container {
+
+    width: 40%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 20px;
+    
+
+}
+
+.div-card {
+    width: 80%;
+    height: 80%;
+    
+}
+
+.div-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+.div-card:hover .div-inner {
+    transform: rotateY(180deg);
+}
+
+.div-front, .div-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.div-back {
+    transform: rotateY(180deg);
+}
+
+.div-front img {
+    width: 100%;
+    height: 100%;
+}
+
+#pie {
+    align-items: center;
+    background-color: white;
+    display: block;
+    
+}
+
+.pie-izq {
+    width: 741px;
+    height: auto;
+    font-size: small;
+    display: flex;
+    align-items: center;
+}
+
+.pie-izq img {
+    width: 20%;
+    height: 10%;
+}
