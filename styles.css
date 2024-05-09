@@ -59,8 +59,8 @@ section {
 
 #container {
 
-    width: 40%;
-    height: 20%;
+    width: 100vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     display: grid;
@@ -70,19 +70,13 @@ section {
 
 }
 
-.div-card {
-    width: 80%;
-    height: 80%;
-    
-}
-
 .div-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 20%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    
+ 
 }
 
 .div-card:hover .div-inner {
@@ -100,10 +94,9 @@ section {
     transform: rotateY(180deg);
 }
 
-.div-front img {
-    width: 100%;
-    height: 100%;
-}
+
+
+
 
 #pie {
     align-items: center;

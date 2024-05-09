@@ -28,23 +28,24 @@ function barraSuperior() {
                     caja2.appendChild(titulo)
 
                     let parrafo = document.createElement('p')
-                    parrafo.innerText = 'Como es tradición cada diciembre armamos el pesebre para esperar la llegada del Niño Dios. Presiona cada tarjeta para descubirr un personaje, concéntrate y encuentra su pareja, así revelarás un personaje en el pesebre y descubrirás un dato curioso sobre esta tradición de navidad'
+                    parrafo.innerText = 'Como es tradición cada diciembre armamos el pesebre para esperar la llegada del Niño Dios. Presiona cada tarjeta para descubrir un personaje, concéntrate y encuentra su pareja, así revelarás un personaje en el pesebre y descubrirás un dato curioso sobre esta tradición de navidad'
                     caja2.appendChild(parrafo)
 }
 
 barraSuperior()
 
-//  
 
-let imagenes = [
-    './img/parejas-001.png',
-    './img/parejas-002.png',
-    './img/parejas-003.png',
-    './img/parejas-004.png',
-    './img/parejas-005.png',
-    './img/parejas-006.png',
-    './img/parejas-007.png',
-    './img/parejas-008.png',
+let images = [
+
+    "img/parejas-001.png",
+    "img/parejas-002.png",
+    "img/parejas-003.png",
+    "img/parejas-004.png",
+    "img/parejas-005.png",
+    "img/parejas-006.png",
+    "img/parejas-007.png",
+    "img/parejas-008.png",
+    
 ]
 
 
@@ -54,21 +55,21 @@ function makingCards() {
     for (let i = 0; i < 8; i++){
         let container = document.getElementById('container')
 
-        let marco = document.createElement('div')
-        marco.classList.add('div-card')
-        container.appendChild(marco)
+        let divCard = document.createElement('div')
+        divCard.classList.add('div-card')
+        container.appendChild(divCard)  
 
         let cartas = document.createElement('div')
         cartas.classList.add('div-inner')
-        marco.appendChild(cartas)
+        divCard.appendChild(cartas)
 
         let caraFront = document.createElement('div')
         caraFront.classList.add('div-front')
         cartas.appendChild(caraFront)
 
-        let caraBack = document.createElement('div')
-        caraBack.classList.add('div-back')
-        cartas.appendChild(caraBack)
+        let caraTras = document.createElement('div')
+        caraTras.classList.add('div-back')
+        cartas.appendChild(caraTras)
 
         let imgBack = document.createElement('img')
 
@@ -78,8 +79,8 @@ function makingCards() {
 
         let imgFront = document.createElement('img')
 
-        imgFront.setAttribute('scr', imagenes[i])
-        caraBack.appendChild(imgFront)
+        imgFront.setAttribute('src', images[i])
+        caraTras.appendChild(imgFront)
 
     }
 }
@@ -91,28 +92,13 @@ function rows() {
     }
 }
 
-rows()
+ rows()
 
 // Generar Aleatoriedad 
-let vacia = []
 
 
-function ramdon() {
 
-    for (let i = 0; i < imagenes.length; i++)
 
-        imagenes.sort((a, b) => Math.random() - 0.5)
-        console.log(imagenes[0])
-
-        if (imagenes[0] === imagenes[0]) {
-            
-            vacia.push(imagenes[0])
-            
-            console.log(vacia)
-        }
-}
-
-ramdon()
 
 
 
